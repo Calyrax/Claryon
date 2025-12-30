@@ -9,8 +9,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Clarity Engine — Turn Mental Noise Into Calm Clarity",
-  description: "A quiet space to untangle your mind and return to grounded focus.",
+  title: {
+    default: "Claryon",
+    template: "%s · Claryon",
+  },
+  description: "A quiet place to lay things down when your mind feels heavy.",
 }
 
 export default function RootLayout({
