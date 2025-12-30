@@ -6,27 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.86.0",
-    "next": "16.0.5",
-    "openai": "^6.9.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "next": "^14.2.5",
+    "openai": "^4.38.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "stripe": "^20.1.0",
-    "uuid": "^13.0.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.22",
-    "baseline-browser-mapping": "^2.8.32",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.5",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.3.3"
   }
 }
