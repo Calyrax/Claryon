@@ -525,17 +525,18 @@ setMemoryTimeline(
     onClick={() => setOpenLayer(null)}
   >
     <div
-      className="
-        w-full max-w-xl
-        rounded-2xl
-        bg-slate-950/95
-        border border-white/10
-        p-6
-        shadow-2xl
-      "
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="mb-4 flex items-center justify-between">
+  className="
+    w-full max-w-xl
+    max-h-[85vh]
+    rounded-2xl
+    bg-slate-950/95
+    border border-white/10
+    shadow-2xl
+    flex flex-col
+  "
+  onClick={(e) => e.stopPropagation()}
+>
+      <div className="mb-4 flex items-center justify-between px-6 pt-6">
         <p className="text-[0.65rem] uppercase tracking-[0.22em] text-slate-500">
           Recent layer
         </p>
@@ -547,7 +548,7 @@ setMemoryTimeline(
         </button>
       </div>
 
-      <div className="space-y-6 text-slate-200 text-sm leading-relaxed">
+      <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-6 text-slate-200 text-sm leading-relaxed">
   <div>
     <p className="text-[0.7rem] uppercase tracking-[0.22em] text-slate-500 mb-1">
       What you laid down
