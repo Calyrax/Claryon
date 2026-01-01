@@ -29,23 +29,23 @@ export async function POST(req: Request) {
     }
 
     const session = await stripe.checkout.sessions.create({
-      mode: "subscription",
-      payment_method_types: ["card"],
-      line_items: [
-        {
-          price: priceId,
-          quantity: 1,
-        },
-      ],
+  mode: "subscription",
+  payment_method_types: ["card"],
+  line_items: [
+    {
+      price: priceId,
+      quantity: 1,
+    },
+  ],
 
-      // 🔑 IMPORTANT: link Stripe checkout to your app session
-      client_reference_id: sessionId ?? undefined,
-      metadata: sessionId ? { sessionId } : undefined,
+  // 🔑 link Stripe checkout to your app session
+  client_reference_id: sessionId ?? undefined,
+  metadata: sessionId ? { sessionId } : undefined,
 
-      success_url: `${baseUrl}/clarify`,
-      cancel_url: `${baseUrl}/`,
-      allow_promotion_codes: true,
-    });
+  success_url: `${baseUrl}/clarify`,
+  cancel_url: `${baseUrl}/clarify`,
+  allow_promotion_codes: true,
+});
 
     return NextResponse.json({ url: session.url });
   } catch (err: any) {
